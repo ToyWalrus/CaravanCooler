@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>  
+  <ThingDef Name="CaravanCooler">
+    <defName>CaravanCooler_Item</defName>
+    <label>caravan cooler</label>
+    <description>A portable cooler to load into a caravan to keep perishable food items refrigerated.</description>
+    <thingClass>CaravanCooler.Item</thingClass>
+
+    <alwaysHaulable>true</alwaysHaulable>
+    <category>Item</category>
+    <selectable>true</selectable>
+    <altitudeLayer>Item</altitudeLayer>
+    <stackLimit>1</stackLimit>
+    
+    <graphicData>
+      <texPath>Things/Building/Power/Battery</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+    </graphicData>
+    
+    <costList>
+      <Steel>100</Steel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    
+    <statBases>
+      <MarketValue>20</MarketValue>
+      <Mass>20.0</Mass>
+    </statBases>
+    
+    <recipeMaker>
+      <researchPrerequisite>CaravanCooler</researchPrerequisite>
+      <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+      <effectWorking>Cook</effectWorking>
+      <soundWorking>Recipe_Machining</soundWorking>
+      <workAmount>800</workAmount>
+      <targetCountAdjustment>5</targetCountAdjustment>
+      <workSkill>Crafting</workSkill>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+      <skillRequirements>
+        <Crafting>6</Crafting>
+      </skillRequirements>
+    </recipeMaker>
+    
+  </ThingDef>
+</Defs>
