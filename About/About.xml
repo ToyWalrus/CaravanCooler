@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Caravan Cooler</name>
+	<author>ToyWalrus</author>
+  <supportedVersions>
+    <li>1.1</li>
+  </supportedVersions>
+  <packageId>toywalrus.caravancooler</packageId>
+	<description>Keeps perishable food items refrigerated in long caravan journeys.</description>
+	<url>https://steamcommunity.com/id/ToyWalrus/myworkshopfiles/?appid=294100</url>
+</ModMetaData>
