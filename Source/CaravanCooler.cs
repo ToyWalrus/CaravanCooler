@@ -23,6 +23,7 @@ namespace CaravanCooler
                 TransferableOneWay item = items[i];
                 if (item.CountToTransfer > 0 && item.ThingDef == CaravanCoolerDefOf.CaravanCooler)
                 {
+                    Log.Message("There's a cooler in teh caravan!");
                     return false;
                 }
             }
