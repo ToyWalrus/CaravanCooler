@@ -13,7 +13,6 @@ namespace CaravanCooler
         {
             var harmony = new Harmony("com.github.toywalrus.caravancooler");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
-            Log.Message("Caravan cooler init");
         }
 
         public static bool WillFoodRot(List<TransferableOneWay> items)
@@ -23,7 +22,6 @@ namespace CaravanCooler
                 TransferableOneWay item = items[i];
                 if (item.CountToTransfer > 0 && item.ThingDef == CaravanCoolerDefOf.CaravanCooler)
                 {
-                    Log.Message("There's a cooler in teh caravan!");
                     return false;
                 }
             }

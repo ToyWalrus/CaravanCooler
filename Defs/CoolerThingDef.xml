@@ -14,6 +14,9 @@
     <thingCategories>
       <li>Items</li>
     </thingCategories>
+    <comps>
+      <li Class="CompProperties_Forbiddable" />
+    </comps>
     
     <graphicData>
       <texPath>Things/Cooler</texPath>
