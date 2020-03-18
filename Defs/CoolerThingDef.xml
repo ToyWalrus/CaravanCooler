@@ -11,6 +11,9 @@
     <selectable>true</selectable>
     <altitudeLayer>Item</altitudeLayer>
     <stackLimit>1</stackLimit>
+    <thingCategories>
+      <li>Items</li>
+    </thingCategories>
     
     <graphicData>
       <texPath>Things/Cooler</texPath>
