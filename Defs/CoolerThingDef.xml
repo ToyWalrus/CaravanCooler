@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs>  
   <ThingDef Name="CaravanCooler">
-    <defName>CaravanCooler_Item</defName>
+    <defName>CaravanCooler</defName>
     <label>caravan cooler</label>
     <description>A portable cooler to load into a caravan to keep perishable food items refrigerated.</description>
-    <thingClass>CaravanCooler.Item</thingClass>
+    <thingClass>CaravanCooler.CaravanCoolerDef</thingClass>
 
     <alwaysHaulable>true</alwaysHaulable>
     <category>Item</category>
@@ -13,8 +13,8 @@
     <stackLimit>1</stackLimit>
     
     <graphicData>
-      <texPath>Things/Building/Power/Battery</texPath>
-      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>Things/Cooler</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
     
     <costList>

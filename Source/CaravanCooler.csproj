@@ -166,8 +166,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CaravanCooler.cs" />
+    <Compile Include="CaravanCoolerDef.cs" />
+    <Compile Include="CaravanCoolerDefOf.cs" />
     <Compile Include="CaravanInfoWindowChanges.cs" />
-    <Compile Include="Item.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -11,7 +11,7 @@ namespace CaravanCooler
         [HarmonyPostfix]
         public static void WillFoodRot(Dialog_FormCaravan __instance, ref bool __result)
         {
-            Log.Message("Postfix ran!");            
+            __result = CaravanCooler.WillFoodRot(__instance.transferables);
         }
     }
 }
