@@ -17,15 +17,20 @@ namespace CaravanCooler
 
         public static bool WillFoodRot(List<TransferableOneWay> items)
         {
+            return !HasCoolerInItems(items);
+        }
+
+        public static bool HasCoolerInItems(List<TransferableOneWay> items)
+        {
             for (int i = 0; i < items.Count; ++i)
             {
                 TransferableOneWay item = items[i];
                 if (item.CountToTransfer > 0 && item.ThingDef == CaravanCoolerDefOf.CaravanCooler)
                 {
-                    return false;
+                    return true;
                 }
             }
-            return true;
+            return false;
         }
     }
 }
