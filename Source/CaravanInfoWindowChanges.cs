@@ -22,7 +22,7 @@ namespace CaravanCooler
         [HarmonyPostfix]
         public static void WillFoodRot(Dialog_FormCaravan __instance, ref bool __result)
         {
-            if (CaravanCooler.HasCoolerInItems(__instance.transferables))
+            if (CaravanCooler.HasCoolerInTransferableItems(__instance.transferables))
             {
                 __result = false;
             }
@@ -59,7 +59,7 @@ namespace CaravanCooler
             if (daysWorthOfFood.First < 600f && 
                 daysWorthOfFood.Second < 600f && 
                 daysWorthOfFood.Second < daysWorthOfFood.First && 
-                CaravanCooler.HasCoolerInItems(CaravanInfo.transferables)
+                CaravanCooler.HasCoolerInTransferableItems(CaravanInfo.transferables)
             ) {
                 __result = daysWorthOfFood.First.ToString("0.#");
             }

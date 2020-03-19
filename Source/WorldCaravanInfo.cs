@@ -1,8 +1,10 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using HarmonyLib;
 using RimWorld.Planet;
 using Verse;
 using System;
+using RimWorld;
 
 namespace CaravanCooler
 {
@@ -11,14 +13,32 @@ namespace CaravanCooler
     public static class WorldCaravanInfo
     {
         [HarmonyPostfix]
-        public static void ApproxDaysUntilRot(List<Thing> caravanItems, ref float __result)
+        public static void NoRotIfCoolerPresent(List<Thing> potentiallyFood, ref float __result)
         {
-            for (int i = 0; i < caravanItems.Count; ++i)
+            if (CaravanCooler.HasCoolerInListOfThings(potentiallyFood))
             {
-                if (caravanItems[i].def == CaravanCoolerDefOf.CaravanCooler)
+                __result = float.PositiveInfinity;
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(Caravan))]
+    [HarmonyPatch("Tick")]
+    public static class WorldCaravanTick
+    {        
+        [HarmonyPostfix]
+        static void SetRotValuesToZero(Caravan __instance)
+        {
+            if (CaravanCooler.HasCoolerInListOfThings(__instance.AllThings.ToList()))
+            {
+                List<Thing> items = __instance.AllThings.ToList();
+                for (int i = 0; i < items.Count; ++i)
                 {
-                    __result = float.PositiveInfinity;
-                    return;
+                    CompRottable comp = items[i].TryGetComp<CompRottable>();
+                    if (comp != null)
+                    {
+                        comp.RotProgress = 0;
+                    }
                 }
             }
         }
