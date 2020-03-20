@@ -3,7 +3,7 @@
   <ResearchProjectDef>
     <defName>CaravanCooler</defName>
     <label>caravan cooler</label>
-    <description>Build a portable cooler to send with your caravans to keep perishable food items refrigerated.</description>
+    <description>Build a portable cooler to send with your caravans that keeps perishable food items refrigerated.</description>
     <tab>Main</tab>
     <baseCost>500</baseCost>
     <techLevel>Industrial</techLevel>

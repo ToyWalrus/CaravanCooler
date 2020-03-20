@@ -3,7 +3,7 @@
   <ThingDef Class="CaravanCooler.ThingDef_CaravanCooler">
     <defName>CaravanCooler</defName>
     <label>caravan cooler</label>
-    <description>A portable cooler to load into a caravan to keep perishable food items refrigerated.</description>
+    <description>A portable cooler to load into a caravan that keeps perishable food items refrigerated.</description>
     <thingClass>CaravanCooler.Thing_CaravanCooler</thingClass>
 
     <alwaysHaulable>true</alwaysHaulable>
