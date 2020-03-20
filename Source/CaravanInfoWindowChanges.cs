@@ -3,9 +3,6 @@ using Verse;
 using RimWorld;
 using RimWorld.Planet;
 using System.Collections.Generic;
-using System.Linq;
-using UnityEngine;
-
 
 namespace CaravanCooler
 {
@@ -54,7 +51,7 @@ namespace CaravanCooler
     public static class CaravanFormingWindowUtility
     {
         [HarmonyPostfix]
-        public static void ReplaceFoodRotInfo(Pair<float, float> daysWorthOfFood, bool multiline, ref string __result)
+        public static void ReplaceFoodRotInfo(Pair<float, float> daysWorthOfFood, ref string __result)
         {           
             if (daysWorthOfFood.First < 600f && 
                 daysWorthOfFood.Second < 600f && 
