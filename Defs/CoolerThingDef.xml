@@ -27,10 +27,12 @@
       <Steel>100</Steel>
       <ComponentIndustrial>2</ComponentIndustrial>
     </costList>
-    
+
     <statBases>
       <MarketValue>20</MarketValue>
       <Mass>20.0</Mass>
+      <DeteriorationRate>2.0</DeteriorationRate>
+      <Flammability>0.3</Flammability>
     </statBases>
     
     <recipeMaker>

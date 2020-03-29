@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Patch>
+
   <!-- Machining -->
   <Operation Class="PatchOperationReplace">
     <xpath>/Defs/ResearchProjectDef[defName="Machining"]/researchViewX</xpath>
@@ -70,45 +71,60 @@
     </value>
   </Operation>
 
-  <!-- Harp -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ResearchProjectDef[defName="Harp"]/researchViewX</xpath>
-    <value>
-      <researchViewX>1.00</researchViewX>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ResearchProjectDef[defName="Harp"]/researchViewY</xpath>
-    <value>
-      <researchViewY>4.90</researchViewY>
-    </value>
+  <!-- Royalty DLC -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Royalty</li>
+    </mods>
+
+    <match Class="PatchOperationSequence">
+      <success>Always</success>
+      <operations>
+
+        <!-- Harp -->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="Harp"]/researchViewX</xpath>
+          <value>
+            <researchViewX>1.00</researchViewX>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="Harp"]/researchViewY</xpath>
+          <value>
+            <researchViewY>4.90</researchViewY>
+          </value>
+        </li>
+
+        <!-- Harpsichord -->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="Harpsichord"]/researchViewX</xpath>
+          <value>
+            <researchViewX>2.00</researchViewX>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="Harpsichord"]/researchViewY</xpath>
+          <value>
+            <researchViewY>4.90</researchViewY>
+          </value>
+        </li>
+
+        <!-- Piano -->
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="Piano"]/researchViewX</xpath>
+          <value>
+            <researchViewX>3.00</researchViewX>
+          </value>
+        </li>
+        <li Class="PatchOperationReplace">
+          <xpath>/Defs/ResearchProjectDef[defName="Piano"]/researchViewY</xpath>
+          <value>
+            <researchViewY>4.90</researchViewY>
+          </value>
+        </li>
+
+      </operations>
+    </match>
   </Operation>
 
-  <!-- Harpsichord -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ResearchProjectDef[defName="Harpsichord"]/researchViewX</xpath>
-    <value>
-      <researchViewX>2.00</researchViewX>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ResearchProjectDef[defName="Harpsichord"]/researchViewY</xpath>
-    <value>
-      <researchViewY>4.90</researchViewY>
-    </value>
-  </Operation>
-
-  <!-- Piano -->
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ResearchProjectDef[defName="Piano"]/researchViewX</xpath>
-    <value>
-      <researchViewX>3.00</researchViewX>
-    </value>
-  </Operation>
-  <Operation Class="PatchOperationReplace">
-    <xpath>/Defs/ResearchProjectDef[defName="Piano"]/researchViewY</xpath>
-    <value>
-      <researchViewY>4.90</researchViewY>
-    </value>
-  </Operation>
 </Patch>
